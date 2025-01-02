@@ -1,11 +1,8 @@
 #include <iostream>
 
 int main() {
-  using std::cout;
-  using std::cin;
-  using std::string;
-
-  string name = "Seif";
-  name.insert(1, "Hany");
-  cout << "Hello " << name;
+  std::string names[] = {"Seif", "Youssef", "Hany"};
+  for (std::string name : names) {
+    std::cout << name << "\n";
+  }
 }
