@@ -1,12 +1,19 @@
 
 public class Test {
   public static void main(String[] args) {
-    int[] arr = {1, 2, 3, 4};
-    System.out.println(arr);
-    printAddress(arr);
+    String name = "Sunday";
+
+    switch (name) {
+    case "Sunday":
+      System.out.println("This is sunday!");
+      break;
+    case "Monday":
+      System.out.println("This is monday");
+      break;
+    default:
+      return;
+    }
   }
 
-  public static void printAddress(int[] arr) {
-    System.out.println(arr);
-  }
+  public static void printAddress(int[] arr) { System.out.println(arr); }
 }
