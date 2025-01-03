@@ -2,17 +2,22 @@
 
 void printInfo(std::string &name);
 
+int fibonacci(const int n);
 int main() {
-  std::string names[] = {"Seif", "Youssef", "Hany"};
-  
-  std::string myName = "Seif";
-  std::cout << &myName << "\n";
-  printInfo(myName);
-  // for (std::string name : names) {
-  //   std::cout << name << "\n";
-  // }
+  int n = 0;
+
+  while (n >= 0) {
+    std::cout << "fibonacci(" << n << "): ";
+    std::cout << fibonacci(n) << "\n";
+    std::cout << "\nEnter number: ";
+    std::cin >> n;
+  }
 }
 
-void printInfo(std::string &name) {
-  std::cout << &name << "\n";
+int fibonacci(const int n) {
+  if (n == 0)
+    return 0;
+  if (n == 1)
+    return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
